@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnakeGame.cfd - Free Online Games 2025</title>
+    <meta name="description" content="Play the best free HTML5 games online at Snake Game CFD! Sudoku, Tetris, Checkers, Reversi and more. No downloads required, play instantly in your browser." />
+    <meta name="keywords" content="free online games, html5 games, puzzle games, sudoku, tetris, browser games, no download" />
+    
+    <!-- Performance: Preconnect to critical 3rd party domains -->
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+    <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AdSense (Deferred to not block LCP) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9774042341049510" crossorigin="anonymous"></script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f5f3ff',
+                100: '#ede9fe',
+                500: '#8b5cf6',
+                600: '#7c3aed',
+                700: '#6d28d9',
+                800: '#5b21b6',
+                900: '#4c1d95',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Critical CSS to prevent FOUC */
+      body { background-color: #0f172a; color: #f8fafc; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #1e293b; }
+      ::-webkit-scrollbar-thumb { background: #4c1d95; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #6d28d9; }
+
+      /* Loader */
+      #app-loader {
+        position: fixed; inset: 0; display: flex; justify-content: center; align-items: center;
+        background: #0f172a; z-index: 9999; transition: opacity 0.3s ease;
+      }
+      .spinner {
+        width: 40px; height: 40px; border: 4px solid #334155;
+        border-top-color: #8b5cf6; border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+        "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-slate-900 text-slate-50 antialiased selection:bg-purple-500 selection:text-white">
+    <!-- Accessibility: Skip to main content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-purple-600 focus:rounded-md focus:font-bold">
+      Skip to main content
+    </a>
+    <div id="root">
+      <div id="app-loader"><div class="spinner"></div></div>
+    </div>
+  </body>
+</html>
