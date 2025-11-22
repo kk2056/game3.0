@@ -4,9 +4,6 @@ import { Game } from './types';
 export const AD_CLIENT_ID = "ca-pub-9774042341049510";
 
 // AD SLOT IDs - YOU MUST REPLACE THESE WITH REAL IDs FROM GOOGLE ADSENSE DASHBOARD
-// 1. Go to AdSense -> Ads -> By ad unit
-// 2. Create new Display ads for each section
-// 3. Copy the data-ad-slot number here
 export const AD_SLOTS = {
   HEADER: "1234567890",    // Replace with real Header ad unit ID
   SIDEBAR: "0987654321",   // Replace with real Sidebar ad unit ID
@@ -18,7 +15,7 @@ export const GAMES: Game[] = [
   {
     id: 'sudoku',
     title: 'Sudoku Master',
-    description: 'Challenge your logic with Sudoku. Featuring multiple difficulty levels from beginner to expert. The best choice to train your brain daily.',
+    description: 'Play Sudoku Master online for free 2025 edition. This classic logic puzzle is unblocked and requires no download to start. Enjoy instant play HTML5 gaming that trains your brain with varying difficulty levels. Perfect for desktop and mobile browsers.',
     src: 'https://playpager.com/embed/sudoku/index.html',
     iconName: 'Grid3X3',
     category: 'Puzzle'
@@ -26,7 +23,7 @@ export const GAMES: Game[] = [
   {
     id: 'falling-cubes',
     title: 'Falling Cubes',
-    description: 'A modern remake of the classic block stacking game. Arrange the falling blocks, clear lines, and beat the high score!',
+    description: 'Experience the ultimate Tetris-style arcade action with Falling Cubes. A completely free 2025 unblocked game that offers instant play without installation. Stack blocks in this lightweight HTML5 browser game designed for quick fun. No download required.',
     src: 'https://playpager.com/embed/cubes/index.html',
     iconName: 'Blocks',
     category: 'Arcade'
@@ -34,7 +31,7 @@ export const GAMES: Game[] = [
   {
     id: 'checkers',
     title: 'Checkers',
-    description: 'The timeless strategy board game. Play against an intelligent AI and test your planning skills.',
+    description: 'Enjoy Classic Checkers, the definitive strategy board game for free 2025. This unblocked HTML5 version allows for instant play against smart AI. No download needed—just open your browser and test your tactical skills in this timeless challenge.',
     src: 'https://playpager.com/embed/checkers/index.html',
     iconName: 'CircleDot',
     category: 'Strategy'
@@ -42,7 +39,7 @@ export const GAMES: Game[] = [
   {
     id: 'othello',
     title: 'Othello Reversi',
-    description: 'A minute to learn, a lifetime to master. Flip your opponent\'s pieces to dominate the board.',
+    description: 'Master the art of strategy with Othello Reversi. Play this free 2025 board game instantly in your browser. It is an unblocked, no download required HTML5 experience where you flip opponent pieces to dominate the board.',
     src: 'https://playpager.com/embed/reversi/index.html',
     iconName: 'Circle',
     category: 'Strategy'
@@ -50,7 +47,7 @@ export const GAMES: Game[] = [
   {
     id: 'word-puzzle',
     title: 'Word Puzzle',
-    description: 'Find hidden words in the jumbled letters. Test your vocabulary and spelling skills in this relaxing game.',
+    description: 'Expand your vocabulary with Word Puzzle, a free 2025 brain teaser. This unblocked word search game features instant play mechanics with no download necessary. A perfect HTML5 educational game to sharpen your spelling skills anytime.',
     src: 'https://playpager.com/embed/wordpuzzle/index.html',
     iconName: 'Type',
     category: 'Word'

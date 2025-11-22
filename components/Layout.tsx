@@ -133,20 +133,16 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         </aside>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-slate-950 border-t border-slate-800 py-12 mt-auto">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-2xl mx-auto mb-8">
-            <h4 className="text-white font-bold mb-4">SnakeGame.cfd</h4>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Your premier destination for free HTML5 online games.
-              Compatible with all devices. Play anywhere, anytime.
-            </p>
+      {/* Footer - Strictly compliant with AdSense requirements */}
+      <footer style={{textAlign: 'center', padding: '30px 20px', background: 'rgba(0,0,0,0.3)', color: '#ccc', fontSize: '14px', marginTop: 'auto', borderTop: '1px solid #334155'}}>
+        <div className="container mx-auto">
+          <div className="mb-4">
+             <Link to="/" style={{color: '#9d4edd', margin: '0 15px', textDecoration: 'none', fontWeight: 500}} className="hover:text-purple-300">Home</Link> |
+             <Link to="/privacy" style={{color: '#9d4edd', margin: '0 15px', textDecoration: 'none', fontWeight: 500}} className="hover:text-purple-300">Privacy Policy</Link> |
+             <Link to="/about" style={{color: '#9d4edd', margin: '0 15px', textDecoration: 'none', fontWeight: 500}} className="hover:text-purple-300">About</Link> |
+             <Link to="/contact" style={{color: '#9d4edd', margin: '0 15px', textDecoration: 'none', fontWeight: 500}} className="hover:text-purple-300">Contact</Link>
           </div>
-          
-          <div className="border-t border-slate-800 pt-8 text-slate-500 text-sm">
-            © 2025 SnakeGame.cfd. All rights reserved. 
-          </div>
+          <small style={{color: '#64748b'}}>© 2025 SnakeGame.cfd. All rights reserved.</small>
         </div>
       </footer>
     </div>

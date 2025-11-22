@@ -1,123 +1,172 @@
 import React from 'react';
-import { Mail, Shield, Info } from 'lucide-react';
+import { Mail, Shield, Info, Gamepad2, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+// Shared styles to ensure 100% design consistency
+const PageContainer: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <div className="bg-gradient-to-br from-slate-900 to-purple-900/50 rounded-xl p-8 border border-slate-700 shadow-2xl text-slate-200">
+    {children}
+  </div>
+);
+
+const Header: React.FC<{ icon: any; title: string }> = ({ icon: Icon, title }) => (
+  <div className="flex items-center gap-3 mb-8 border-b border-white/10 pb-6">
+    <div className="p-3 bg-purple-600 rounded-lg shadow-lg shadow-purple-500/20">
+      <Icon className="w-6 h-6 text-white" />
+    </div>
+    <h1 className="text-3xl font-bold text-white tracking-tight">{title}</h1>
+  </div>
+);
 
 export const AboutPage: React.FC = () => (
-  <div className="bg-slate-800 rounded-xl p-8 border border-slate-700 shadow-lg">
-    <div className="flex items-center gap-3 mb-6">
-      <div className="p-3 bg-purple-600 rounded-lg">
-        <Info className="w-6 h-6 text-white" />
-      </div>
-      <h1 className="text-3xl font-bold text-white">About SnakeGame.cfd</h1>
-    </div>
+  <PageContainer>
+    <Header icon={Info} title="About Us" />
     
-    <div className="prose prose-invert max-w-none text-slate-300">
-      <p className="text-lg mb-6">
-        Welcome to <span className="text-purple-400 font-bold">SnakeGame.cfd</span> — your one-stop destination for free HTML5 online games!
-        We are dedicated to providing high-quality, clean browser gaming experiences so every player can enjoy games anytime, anywhere.
-      </p>
-      
-      <h3 className="text-white text-xl font-bold mt-8 mb-4">Our Mission</h3>
-      <p>
-        Our mission is simple: to break down device and platform barriers. No tedious downloads, installations, or settings required—just classic, fun games at your fingertips.
-        We believe great gaming experiences should be free, convenient, and ubiquitous.
+    <div className="prose prose-invert max-w-none">
+      <p className="text-lg leading-relaxed mb-6">
+        Welcome to <strong className="text-purple-400">SnakeGame.cfd</strong>, your premier destination for the best free online games in 2025. 
+        We are dedicated to providing a seamless, unblocked gaming experience that requires <span className="text-white font-semibold">no downloads</span> and <span className="text-white font-semibold">no installation</span>.
       </p>
 
-      <div className="grid md:grid-cols-2 gap-4 mt-8">
-        <div className="bg-slate-700/50 p-4 rounded-lg">
-          <h4 className="font-bold text-white mb-2">⚡ Instant Play</h4>
-          <p className="text-sm">Built on HTML5 technology. Click link to play immediately, no download waiting.</p>
+      <h3 className="text-xl font-bold text-white mt-8 mb-4 flex items-center gap-2">
+        <Gamepad2 className="w-5 h-5 text-purple-400" />
+        Our Game Collection
+      </h3>
+      <p className="mb-4 text-slate-300">
+        We curate high-quality HTML5 games that run instantly in your browser. Our current top titles include:
+      </p>
+      
+      <div className="grid gap-4 md:grid-cols-2 mb-8">
+        <div className="bg-slate-800/50 p-4 rounded-lg border border-purple-500/20 hover:border-purple-500/50 transition-colors">
+          <strong className="text-white block mb-1">Sudoku Master</strong>
+          <span className="text-sm text-slate-400">The ultimate logic puzzle for brain training with multiple difficulty tiers.</span>
         </div>
-        <div className="bg-slate-700/50 p-4 rounded-lg">
-          <h4 className="font-bold text-white mb-2">📱 Multi-Device</h4>
-          <p className="text-sm">Perfectly adapted for iOS, Android phones, tablets, and desktop browsers.</p>
+        <div className="bg-slate-800/50 p-4 rounded-lg border border-purple-500/20 hover:border-purple-500/50 transition-colors">
+          <strong className="text-white block mb-1">Falling Cubes</strong>
+          <span className="text-sm text-slate-400">A modern, fast-paced take on the classic block-stacking arcade genre.</span>
+        </div>
+        <div className="bg-slate-800/50 p-4 rounded-lg border border-purple-500/20 hover:border-purple-500/50 transition-colors">
+          <strong className="text-white block mb-1">Classic Checkers</strong>
+          <span className="text-sm text-slate-400">Strategic board gameplay powered by smart AI opponents.</span>
+        </div>
+        <div className="bg-slate-800/50 p-4 rounded-lg border border-purple-500/20 hover:border-purple-500/50 transition-colors">
+          <strong className="text-white block mb-1">Othello Reversi</strong>
+          <span className="text-sm text-slate-400">Deep strategy game where you flip pieces to conquer the board.</span>
+        </div>
+        <div className="bg-slate-800/50 p-4 rounded-lg border border-purple-500/20 hover:border-purple-500/50 transition-colors">
+          <strong className="text-white block mb-1">Word Puzzle</strong>
+          <span className="text-sm text-slate-400">Expand your vocabulary with our engaging word search challenges.</span>
         </div>
       </div>
+
+      <h3 className="text-xl font-bold text-white mt-8 mb-4">Why Choose Us?</h3>
+      <ul className="space-y-2 text-slate-300">
+        <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> 100% Free Forever</li>
+        <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Instant Play (No Lag)</li>
+        <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Mobile & Desktop Compatible</li>
+      </ul>
     </div>
-  </div>
+  </PageContainer>
 );
 
 export const ContactPage: React.FC = () => (
-  <div className="bg-slate-800 rounded-xl p-8 border border-slate-700 shadow-lg">
-    <div className="flex items-center gap-3 mb-6">
-      <div className="p-3 bg-purple-600 rounded-lg">
-        <Mail className="w-6 h-6 text-white" />
+  <PageContainer>
+    <Header icon={Mail} title="Contact Us" />
+
+    <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 text-center mb-8">
+      <p className="text-lg text-slate-300 mb-6">
+        Have questions, suggestions, or need support? We are here to help!
+      </p>
+      
+      <div className="inline-block p-4 bg-slate-900 rounded-lg border border-purple-500/30 mb-4">
+        <span className="text-slate-400 text-sm block mb-1 uppercase tracking-wider">Email Support</span>
+        <a href="mailto:contact@snakegame.cfd" className="text-2xl font-bold text-white hover:text-purple-400 transition-colors">
+          contact@snakegame.cfd
+        </a>
       </div>
-      <h1 className="text-3xl font-bold text-white">Contact Us</h1>
+      
+      <p className="text-sm text-purple-300 mt-4 bg-purple-900/20 inline-block px-4 py-1 rounded-full border border-purple-500/20">
+        ⚡ We usually reply within 24 hours
+      </p>
     </div>
 
-    <div className="grid md:grid-cols-2 gap-8">
-      <div>
-        <p className="text-slate-300 mb-6">
-          Have any questions, feedback, or suggestions? We'd love to hear from you!
-          Your input is the driving force behind our platform improvements.
-        </p>
-        
-        <div className="space-y-4">
-          <div className="flex items-center gap-3 text-slate-300">
-            <Mail className="w-5 h-5 text-purple-400" />
-            <span>contact@snakegame.cfd</span>
-          </div>
-          <div className="bg-slate-700/30 p-4 rounded-lg border-l-4 border-purple-500">
-            <p className="text-sm text-slate-400">
-              <strong>Business Cooperation:</strong> For advertising or game integration,
-              please include "Business" in your email subject line.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-        <div>
-          <label className="block text-sm font-medium text-slate-300 mb-1">Your Name</label>
-          <input type="text" className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-purple-500" placeholder="John Doe" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-slate-300 mb-1">Email Address</label>
-          <input type="email" className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-purple-500" placeholder="your@email.com" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-slate-300 mb-1">Message</label>
-          <textarea className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white h-32 focus:outline-none focus:border-purple-500" placeholder="Please describe your question or suggestion..."></textarea>
-        </div>
-        <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-lg transition-colors">
-          Send Message
-        </button>
-      </form>
+    <div className="text-sm text-slate-500 text-center">
+      For business inquiries or advertising opportunities, please use the subject line "Business Inquiry".
     </div>
-  </div>
+  </PageContainer>
 );
 
 export const PrivacyPage: React.FC = () => (
-  <div className="bg-slate-800 rounded-xl p-8 border border-slate-700 shadow-lg">
-    <div className="flex items-center gap-3 mb-6">
-      <div className="p-3 bg-purple-600 rounded-lg">
-        <Shield className="w-6 h-6 text-white" />
+  <PageContainer>
+    <Header icon={Shield} title="Privacy Policy" />
+
+    <div className="prose prose-invert prose-sm max-w-none text-slate-300 space-y-6">
+      <div>
+        <p className="text-xs text-slate-500 uppercase tracking-widest mb-2">Last Updated: January 1, 2025</p>
+        <p>
+          At <strong>SnakeGame.cfd</strong>, accessible from https://snakegame.cfd, one of our main priorities is the privacy of our visitors. 
+          This Privacy Policy document contains types of information that is collected and recorded by SnakeGame.cfd and how we use it.
+        </p>
       </div>
-      <h1 className="text-3xl font-bold text-white">Privacy Policy</h1>
+
+      <section>
+        <h3 className="text-lg font-bold text-white mb-2">Log Files</h3>
+        <p>
+          SnakeGame.cfd follows a standard procedure of using log files. These files log visitors when they visit websites. 
+          The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamp, referring/exit pages, and possibly the number of clicks. 
+          These are not linked to any information that is personally identifiable.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-lg font-bold text-white mb-2">Cookies and Web Beacons</h3>
+        <p>
+          Like any other website, SnakeGame.cfd uses "cookies". These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. 
+          The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.
+        </p>
+      </section>
+
+      <section className="bg-slate-800/50 p-4 rounded-lg border-l-4 border-purple-500">
+        <h3 className="text-lg font-bold text-white mb-2">Google DoubleClick DART Cookie</h3>
+        <p>
+          Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. 
+          However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – 
+          <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:underline ml-1">https://policies.google.com/technologies/ads</a>
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-lg font-bold text-white mb-2">GDPR Data Protection Rights</h3>
+        <p>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
+        <ul className="list-disc pl-5 space-y-1 mt-2">
+          <li>The right to access – You have the right to request copies of your personal data.</li>
+          <li>The right to rectification – You have the right to request that we correct any information you believe is inaccurate.</li>
+          <li>The right to erasure – You have the right to request that we erase your personal data, under certain conditions.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 className="text-lg font-bold text-white mb-2">CCPA Privacy Rights (Do Not Sell My Personal Information)</h3>
+        <p>
+          Under the CCPA, among other rights, California consumers have the right to request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.
+          SnakeGame.cfd does not sell your personal data.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-lg font-bold text-white mb-2">Children's Information</h3>
+        <p>
+          Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.
+          SnakeGame.cfd does not knowingly collect any Personal Identifiable Information from children under the age of 13.
+        </p>
+      </section>
+
+      <div className="pt-6 border-t border-slate-700 mt-8">
+        <p className="text-center">
+          If you have additional questions or require more information about our Privacy Policy, do not hesitate to 
+          <Link to="/contact" className="text-purple-400 hover:underline ml-1">contact us</Link>.
+        </p>
+      </div>
     </div>
-
-    <div className="prose prose-invert max-w-none text-slate-300 text-sm">
-      <p>Last Updated: November 14, 2025</p>
-      
-      <h3 className="text-white text-lg font-bold mt-6">Information We Collect</h3>
-      <p>At SnakeGame.cfd, we are committed to protecting your privacy. This privacy policy explains what information we collect and how we use it.</p>
-
-      <h3 className="text-white text-lg font-bold mt-6">Google AdSense</h3>
-      <p>
-        This website uses Google AdSense to display advertisements. Google AdSense uses Cookies and Web Beacons to serve ads based on your prior visits to this website or other websites.
-        Google may use Cookies to collect information about your visits to this and other websites in order to provide advertisements about goods and services of interest to you.
-      </p>
-
-      <h3 className="text-white text-lg font-bold mt-6">Cookie Usage</h3>
-      <p>This website uses cookies to:</p>
-      <ul className="list-disc pl-5 space-y-1">
-        <li>Remember your preferences (e.g., volume)</li>
-        <li>Enable advertisement functionality</li>
-        <li>Analyze website traffic via Google Analytics to improve experience</li>
-      </ul>
-
-      <h3 className="text-white text-lg font-bold mt-6">Your Rights</h3>
-      <p>You have the right to visit Google's Ad Settings to opt-out of personalized advertising, or disable cookies in your browser settings.</p>
-    </div>
-  </div>
+  </PageContainer>
 );
