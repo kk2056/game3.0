@@ -6,6 +6,13 @@ import { GAMES, AD_SLOTS } from '../constants';
 import { Gamepad2, Sparkles } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
+  const scrollToGames = () => {
+    const gamesSection = document.getElementById('games');
+    if (gamesSection) {
+      gamesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <SeoWrapper 
       title="Free Online Games - Play Instantly No Downloads" 
@@ -40,9 +47,12 @@ export const HomePage: React.FC = () => {
             </p>
 
             <div className="flex justify-center gap-4">
-              <a href="#games" className="bg-white text-purple-900 hover:bg-purple-50 px-8 py-3 rounded-full font-bold transition-colors shadow-lg shadow-purple-900/20">
+              <button 
+                onClick={scrollToGames}
+                className="bg-white text-purple-900 hover:bg-purple-50 px-8 py-3 rounded-full font-bold transition-colors shadow-lg shadow-purple-900/20 cursor-pointer"
+              >
                 Start Playing
-              </a>
+              </button>
             </div>
           </div>
         </div>
