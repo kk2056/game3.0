@@ -7,9 +7,13 @@ import { Gamepad2, Sparkles } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
   const scrollToGames = () => {
-    const gamesSection = document.getElementById('games');
+    // Attempt to find the element
+    const gamesSection = document.getElementById('games-section');
     if (gamesSection) {
-      gamesSection.scrollIntoView({ behavior: 'smooth' });
+      // Use standard scrolling
+      const yOffset = -80; // Offset for sticky header
+      const y = gamesSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
@@ -20,10 +24,10 @@ export const HomePage: React.FC = () => {
     >
       <div className="space-y-10 animate-fade-in">
         
-        {/* Hero Section - Optimized for LCP (No External Images) */}
-        <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 text-center py-20 px-6 shadow-2xl border border-white/10">
+        {/* Hero Section */}
+        <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 text-center py-20 px-6 shadow-2xl border border-white/10 isolate">
           {/* CSS Mesh Pattern */}
-          <div className="absolute inset-0 opacity-20" style={{
+          <div className="absolute inset-0 opacity-20 pointer-events-none" style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)',
             backgroundSize: '24px 24px'
           }}></div>
@@ -46,10 +50,11 @@ export const HomePage: React.FC = () => {
               From brain-teasers to classic arcade action, enjoy gaming directly in your browser.
             </p>
 
-            <div className="flex justify-center gap-4">
+            <div className="flex justify-center gap-4 relative z-50">
               <button 
+                type="button"
                 onClick={scrollToGames}
-                className="bg-white text-purple-900 hover:bg-purple-50 px-8 py-3 rounded-full font-bold transition-colors shadow-lg shadow-purple-900/20 cursor-pointer"
+                className="bg-white text-purple-900 hover:bg-purple-50 px-8 py-3 rounded-full font-bold transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-purple-900/20 cursor-pointer border-none"
               >
                 Start Playing
               </button>
@@ -58,7 +63,7 @@ export const HomePage: React.FC = () => {
         </div>
 
         {/* Game Grid */}
-        <div id="games" className="scroll-mt-24">
+        <div id="games-section" className="scroll-mt-24">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-white flex items-center gap-2">
               <Gamepad2 className="w-6 h-6 text-purple-500" />
@@ -76,7 +81,7 @@ export const HomePage: React.FC = () => {
         {/* In-Feed Ad - Fixed Height to prevent CLS */}
         <AdUnit slotId={AD_SLOTS.IN_CONTENT} className="min-h-[280px]" label="Sponsored Content" />
 
-        {/* SEO Text Block - Semantic HTML */}
+        {/* SEO Text Block */}
         <section className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50 backdrop-blur-sm">
           <h2 className="text-xl font-bold text-white mb-4">Why Choose SnakeGame.cfd?</h2>
           <div className="grid md:grid-cols-2 gap-8 text-slate-400 leading-relaxed text-sm md:text-base">

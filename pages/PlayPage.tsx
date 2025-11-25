@@ -92,7 +92,9 @@ export const PlayPage: React.FC = () => {
               allowFullScreen
               scrolling="no"
               onLoad={handleIframeLoad}
-              allow="autoplay; fullscreen; clipboard-write"
+              allow="autoplay; fullscreen; clipboard-write; encrypted-media"
+              referrerPolicy="no-referrer"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation"
             />
           </div>
 
