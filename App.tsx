@@ -4,6 +4,7 @@ import { Layout } from './components/Layout';
 import { HomePage } from './pages/HomePage';
 import { PlayPage } from './pages/PlayPage';
 import { AboutPage, ContactPage, PrivacyPage } from './pages/StaticPages';
+import { CookieConsent } from './components/CookieConsent';
 
 const App: React.FC = () => {
   
@@ -26,6 +27,7 @@ const App: React.FC = () => {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
         </Routes>
+        <CookieConsent />
       </Layout>
     </HashRouter>
   );
