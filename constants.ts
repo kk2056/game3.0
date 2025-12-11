@@ -3,7 +3,7 @@ import { Game } from './types';
 // AdSense Client ID
 export const AD_CLIENT_ID = "ca-pub-9774042341049510";
 
-// AD SLOT IDs
+// AD SLOT IDs (Replace these with your actual new unit IDs from AdSense dashboard if available, otherwise these act as placeholders)
 export const AD_SLOTS = {
   HEADER: "1234567890",    
   SIDEBAR: "0987654321",   
@@ -15,9 +15,9 @@ export const GAMES: Game[] = [
   {
     id: 'sudoku',
     title: 'Sudoku Master',
-    description: `Dive into the world of Sudoku Master, the premier destination for free online logic puzzles in 2025. Sudoku is more than just a game; it is a mental workout designed to sharpen your cognitive abilities, improve concentration, and enhance logical thinking skills. Our version requires absolutely no downloads, offering a seamless, unblocked HTML5 experience directly in your web browser. 
+    description: `Unlock your mental potential with Sudoku Master, the premier choice for logic puzzle enthusiasts in 2025. Unlike simple distractions, Sudoku is a scientifically recognized cognitive workout that enhances memory, concentration, and logical reasoning skills. Our updated 2025 edition features a sleek, responsive interface that works flawlessly across all devices without requiring any downloads or installations. 
 
-Whether you are a beginner looking to understand the basics or a seasoned veteran seeking a fiendish challenge, Sudoku Master adapts to your skill level. The grid-based gameplay creates a meditative state that many players find essential for digital detoxing in today's fast-paced world. By engaging with numbers and patterns daily, you keep your brain active and healthy. Optimized for both desktop and mobile devices, you can enjoy instant play without the hassle of app installations or data-heavy updates. Join millions of players worldwide who have made Sudoku their daily ritual for mental clarity and relaxation.`,
+The game follows the classic 9x9 grid rule where every row, column, and 3x3 sub-grid must contain the digits 1 through 9 exactly once. Whether you are a beginner stepping into the world of logic games or a grandmaster seeking a fiendish challenge, our adaptive difficulty engine ensures the perfect experience. Regular play has been linked to delayed brain aging and improved focus in daily tasks. In an era of digital noise, Sudoku Master offers a serene, mindful escape. It’s not just a game; it’s a daily ritual for millions who value mental clarity. Enjoy the satisfaction of solving complex patterns and join a global community of thinkers right here, instantly in your browser.`,
     src: 'https://playpager.com/embed/sudoku/index.html',
     iconName: 'Grid3X3',
     category: 'Puzzle'
@@ -25,19 +25,19 @@ Whether you are a beginner looking to understand the basics or a seasoned vetera
   {
     id: 'falling-cubes',
     title: 'Falling Cubes',
-    description: `Experience the thrill of Falling Cubes, the ultimate block-stacking arcade game revitalized for 2025. Inspired by the legendary classics of the genre, Falling Cubes offers a modern, high-definition twist on spatial puzzle gameplay. The objective is simple yet endlessly addictive: rotate and guide falling geometric shapes to create complete horizontal lines, which then disappear to clear the board and boost your score.
+    description: `Prepare for the ultimate arcade challenge with Falling Cubes, a high-definition reimaging of the legendary block-stacking genre for the modern web. In 2025, we've stripped away the bloat to deliver a pure, high-performance HTML5 experience that tests your reflexes and spatial awareness like never before. The goal remains timeless: guide distinct geometric shapes as they descend, rotating and placing them to form solid horizontal lines that vanish and award points.
 
-What makes Falling Cubes stand out is its instant-play capability. Built on lightweight HTML5 technology, it loads in seconds on any device, making it the perfect unblocked game for quick breaks at school or work. There are no large files to download and no complex controls to learn—just pure, reflex-testing fun. As the speed increases, so does the challenge, demanding quick decision-making and precise hand-eye coordination. It is a timeless test of skill that helps improve spatial awareness and reaction times, all while providing a satisfying and stress-relieving gaming loop that keeps players coming back for just one more round.`,
+Falling Cubes is more than just a retro throwback; it is a tool for sharpening hand-eye coordination and rapid decision-making skills. The game starts at a manageable pace, allowing new players to grasp the mechanics, before ramping up to heart-pounding speeds that demand split-second reactions. Perfect for quick breaks at school or the office, this unblocked game requires no plugins or heavy downloads. It represents the gold standard of "easy to learn, hard to master" gameplay. As you clear lines and stack combos, you'll enter a state of flow that is both exciting and deeply relaxing, making it the perfect antidote to a stressful day.`,
     src: 'https://playpager.com/embed/cubes/index.html',
     iconName: 'Blocks',
     category: 'Arcade'
   },
   {
     id: 'checkers',
-    title: 'Checkers',
-    description: `Rediscover the timeless strategy of Classic Checkers, now optimized for the modern web. As one of the oldest and most beloved board games in history, Checkers (also known as Draughts) offers a perfect balance of simplicity and strategic depth. Our 2025 free online version allows you to challenge intelligent AI opponents instantly, with no registration or download required.
+    title: 'Classic Checkers',
+    description: `Experience the rich history and deep strategy of Classic Checkers (Draughts), now remastered for 2025's web standards. As one of the world's oldest strategy board games, Checkers has stood the test of time by offering a battle of wits that is accessible to children yet challenging enough for grandmasters. Our free online version connects you instantly with a sophisticated AI opponent, designed to teach you tactical foresight and planning.
 
-The game is played on an 8x8 grid where the goal is to capture all of your opponent's pieces or trap them so they have no legal moves remaining. It is an excellent tool for developing foresight, planning, and tactical thinking. Unlike complex modern video games, Checkers relies purely on skill and strategy, making it a fair and intellectually stimulating contest. Whether you have five minutes or an hour, the game provides a rewarding mental challenge. The clean, responsive interface ensures that you can focus entirely on your next move, whether you are playing on a large desktop monitor or a compact mobile screen. Perfect for strategy enthusiasts of all ages.`,
+Played on an 8x8 distinct board, the objective is to capture all opponent pieces by jumping over them diagonally. This game is an excellent educational tool, fostering critical thinking, patience, and the ability to predict consequences—skills that translate valuable benefits to real-life problem solving. Unlike modern games reliant on luck or microtransactions, Classic Checkers is a pure meritocracy. Every win is earned through superior strategy. Whether you have a few minutes on your commute or an hour to relax at home, the clean, distraction-free design ensures your focus remains entirely on the board. No setup, no cleanup, just pure intellectual competition.`,
     src: 'https://playpager.com/embed/checkers/index.html',
     iconName: 'CircleDot',
     category: 'Strategy'
@@ -45,9 +45,9 @@ The game is played on an 8x8 grid where the goal is to capture all of your oppon
   {
     id: 'othello',
     title: 'Othello Reversi',
-    description: `Step into the strategic arena of Othello Reversi, the classic board game famous for the slogan "A minute to learn, a lifetime to master." In this free 2025 online edition, you engage in a battle of wits where the tide can turn with a single move. The game is played with reversible discs—light on one side, dark on the other. Your goal is to trap your opponent's discs between two of your own, flipping them to your color.
+    description: `Dive into the captivating world of Othello Reversi, the abstract strategy game where the balance of power can shift in a heartbeat. Famous for the maxim "A minute to learn, a lifetime to master," this game challenges players to outmaneuver their opponent on an 8x8 grid. The 2025 web edition brings this classic to your screen with crisp graphics and instant playability, requiring zero disk space or installation time.
 
-This unblocked HTML5 game is a powerhouse for cognitive development, encouraging players to think several turns ahead and visualize complex patterns on the board. It is completely free to play and requires zero installation, ensuring your device remains safe and clutter-free. The dynamic nature of Othello means that no two games are ever the same; a losing position can transform into a victory in the final moments. It is the perfect game for those who appreciate deep strategy, critical thinking, and competitive board gaming without the setup time of physical sets. Play instantly and test your strategic mind today.`,
+The gameplay involves placing discs to trap your opponent's pieces between your own, flipping them to your color. This mechanic teaches players to think spatially and plan multiple moves ahead, as a single well-placed disc can transform the entire board. It is a fantastic mental exercise that improves pattern recognition and strategic flexibility. Whether playing aggressively to corner your opponent or defensively to control the center, Othello Reversi offers endless replayability. It is completely free, family-friendly, and runs smoothly on everything from high-end desktops to budget smartphones, making premium strategy gaming accessible to everyone.`,
     src: 'https://playpager.com/embed/reversi/index.html',
     iconName: 'Circle',
     category: 'Strategy'
@@ -55,9 +55,9 @@ This unblocked HTML5 game is a powerhouse for cognitive development, encouraging
   {
     id: 'word-puzzle',
     title: 'Word Puzzle',
-    description: `Expand your vocabulary and sharpen your spelling skills with Word Puzzle Challenge, the definitive word search game for 2025. Designed for linguists, students, and puzzle lovers alike, this game turns language learning into an exciting and addictive activity. Your task is to find hidden words within a grid of scrambled letters, connecting them horizontally, vertically, or diagonally.
+    description: `Challenge your vocabulary and observation skills with Word Puzzle 2025, the definitive word search experience for the modern web. Designed for linguists, students, and casual gamers alike, this game combines the relaxation of classic pen-and-paper puzzles with the convenience of digital play. Your mission is to locate hidden words camouflaged within a grid of scrambled letters, connecting them horizontally, vertically, or diagonally.
 
-This free, no-download game is an excellent educational tool that helps improve pattern recognition and cognitive processing speed. It is widely used by students to reinforce spelling and by adults to keep their minds sharp and agile. The game features a vast dictionary of words across various topics, ensuring that the content remains fresh and challenging. Because it runs directly in your browser using HTML5, you can start playing instantly on any device without worrying about compatibility or storage space. Relax, unwind, and boost your brainpower with a game that combines fun, education, and accessibility in one sleek package.`,
+This game is not just entertainment; it is a powerful educational tool. Regular play helps expand your vocabulary, improve spelling accuracy, and boost cognitive processing speed. It is widely used by educators and lifelong learners to keep the mind sharp and agile. Our version features a vast, constantly updating dictionary covering diverse topics, ensuring that no two games are ever the same. With no downloads required and an interface optimized for readability on all screen sizes, you can enjoy a brain-boosting session anytime, anywhere. Immerse yourself in the letters and discover the joy of finding the perfect word.`,
     src: 'https://playpager.com/embed/wordpuzzle/index.html',
     iconName: 'Type',
     category: 'Word'
