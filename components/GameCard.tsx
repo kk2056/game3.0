@@ -1,7 +1,7 @@
 import React from 'react';
 import { Game } from '../types';
 import { Link } from 'react-router-dom';
-import { Play, Grid3X3, Boxes, CircleDot, Circle, Type } from 'lucide-react';
+import { Play, Grid3X3, Boxes, CircleDot, Circle, Type, Gamepad2 } from 'lucide-react';
 
 // Icon mapping
 const iconMap: Record<string, any> = {
@@ -9,7 +9,8 @@ const iconMap: Record<string, any> = {
   'Blocks': Boxes, 
   'CircleDot': CircleDot,
   'Circle': Circle,
-  'Type': Type
+  'Type': Type,
+  'Gamepad2': Gamepad2
 };
 
 interface GameCardProps {
@@ -41,10 +42,10 @@ export const GameCard: React.FC<GameCardProps> = ({ game }) => {
         </p>
         
         <div className="mt-auto w-full">
-          <button className="w-full py-2 bg-slate-700 hover:bg-purple-600 text-white rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 group-hover:bg-purple-600">
+          <div className="w-full py-2 bg-slate-700 group-hover:bg-purple-600 text-white rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
             <Play className="w-4 h-4 fill-current" />
             Play Now
-          </button>
+          </div>
         </div>
       </div>
     </Link>
